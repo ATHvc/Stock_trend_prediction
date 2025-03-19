@@ -1,9 +1,3 @@
-pip install matplotlib
-pip install numpy
-pip install pandas 
-pip install yfinance
-pip install pandas_datareader
-pip install streamlit 
 import numpy as np 
 import pandas as pd
 import matplotlib.pyplot as plt 
