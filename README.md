@@ -1,67 +1,72 @@
-# 📊 Time Series Analysis with Python
+# Time Series Analysis
 
-This repository is a complete walkthrough of **Time Series Analysis**, covering the end-to-end process of analyzing temporal data. From initial visualization and decomposition to testing for stationarity and implementing ARIMA models for forecasting, this project offers a structured, hands-on guide to time series techniques using Python.
+This repository contains Jupyter Notebooks and code for learning and experimenting with time series analysis concepts using Python. The work includes statistical tests, model simulation, and practical application to real-world datasets such as financial market data and production series.
 
-If you're interested in financial modeling, climate data trends, energy demand forecasting, or sales prediction — the methods covered here form the foundation of any serious time series forecasting workflow.
+## Contents
+
+- **ARIMA_Model.ipynb**  
+  Demonstrates the use of ARIMA (AutoRegressive Integrated Moving Average) and ARMA models for simulating stock trading strategies using historical price data (e.g., Apple Inc. - AAPL). Includes visualization of returns, ACF/PACF plots, and a simulation function for buy/sell strategies.
+
+- **Augmented_Dickey_Fuller_Test_.ipynb**  
+  Explains and demonstrates the Augmented Dickey-Fuller (ADF) test for stationarity. Includes code to generate AR(1) and AR(2) processes (stationary and non-stationary) and visualize their behavior and test results.
+
+- **Time_series_analysis.ipynb**  
+  Tutorial notebook that loads and explores a monthly ice cream production time series and SPY (S&P 500 ETF) stock prices. Includes ACF and PACF analysis, plotting, and data preparation steps.
+
+## Features
+
+- Statistical tests for time series stationarity
+- ARIMA/ARMA modeling and simulation
+- Custom simulation of trading strategies
+- Visualizations: line plots, ACF (Autocorrelation Function), PACF (Partial Autocorrelation Function)
+- Use of real-world datasets (Yahoo Finance, CSV data)
+
+## Requirements
+
+- Python 3.x
+- Jupyter Notebook
+- Libraries:
+  - `numpy`
+  - `pandas`
+  - `matplotlib`
+  - `seaborn`
+  - `tqdm`
+  - `statsmodels`
+  - `yfinance`
+  - `scipy`
+
+You can install the required libraries with:
+
+```bash
+pip install numpy pandas matplotlib seaborn tqdm statsmodels yfinance scipy
+```
+
+## How to Use
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/ATHvc/Time_Series_Analysis.git
+    ```
+2. Open the desired notebook(s) with Jupyter Notebook or Jupyter Lab:
+    ```bash
+    jupyter notebook
+    ```
+3. Run the code cells in order. For `Time_series_analysis.ipynb`, ensure that `ice_cream.csv` is present in the working directory.
+
+## References
+
+- [Statsmodels Documentation](https://www.statsmodels.org/)
+- [Yahoo Finance Python API](https://pypi.org/project/yfinance/)
+- [ADF Test Explanation - Wikipedia](https://en.wikipedia.org/wiki/Augmented_Dickey–Fuller_test)
+- [ARIMA Model Explanation - Wikipedia](https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average)
+
+## License
+
+This repository is for educational and research purposes. See the `LICENSE` file (if present) for usage terms.
 
 ---
 
-## 🚀 Project Overview
-
-Time series data is ubiquitous — found in everything from stock market trends and weather patterns to electricity consumption and website traffic. Unlike standard datasets, time series data is ordered and often contains seasonal and trend components.
-
-In this project, we demonstrate:
-- How to explore and visualize time-dependent data
-- How to determine if a time series is **stationary**
-- Techniques to make a time series stationary
-- Building and validating forecasting models using the **ARIMA** approach
-
----
-
-## 📁 Notebooks Breakdown
-
-### 📘 1. `Time_series_analysis.ipynb`
-
-This notebook provides the foundation:
-- Time series data loading and formatting
-- Line plots and initial insights
-- Decomposition of time series into trend, seasonality, and residuals
-- Rolling mean and variance for stability checks
-- ACF and PACF plots for correlation analysis
-
-> 📈 *Goal:* Understand patterns and dependencies in your time series.
-
----
-
-### 📘 2. `Augmented_Dickey_Fuller_Test_.ipynb`
-
-Stationarity is a crucial assumption in time series modeling. This notebook explains:
-- What stationarity means and why it matters
-- Applying the **Augmented Dickey-Fuller (ADF)** test using `statsmodels`
-- Interpreting ADF test outputs: test statistic, p-value, lags, etc.
-- Applying differencing (first or second order) to transform non-stationary series into stationary ones
-
-> 🧪 *Goal:* Test and prepare your data for model building.
-
----
-
-### 📘 3. `ARIMA_Model.ipynb`
-
-This notebook is the core of forecasting:
-- Using ACF and PACF to estimate AR (p), I (d), MA (q) terms
-- Manual vs automated model selection (using `pmdarima`)
-- Fitting ARIMA models using `statsmodels`
-- Forecasting future values with confidence intervals
-- Visual diagnostics: residuals, Q-Q plots, prediction error
-
-> 🔮 *Goal:* Predict future values from historical patterns using ARIMA.
-
----
-
-## 🔧 Setup & Installation
-
-### Requirements
-
+*Created and maintained by [ATHvc](https://github.com/ATHvc)*
 To run the notebooks, install the following libraries:
 
 ```bash
